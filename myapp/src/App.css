@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  /* Light Theme */
+  --color-very-light-gray: hsl(0, 0%, 98%);
+  --color-very-light-grayish-blue: hsl(236, 33%, 92%);
+  --color-light-grayish-blue: hsl(233, 11%, 84%);
+  --color-dark-grayish-blue: hsl(236, 9%, 61%);
+  --color-very-dark-grayish-blue: hsl(235, 19%, 35%);
+  --color-gradient-start: hsl(192, 100%, 67%);
+  --color-gradient-end: hsl(280, 87%, 65%);
+
+  /* Dark Theme */
+  --color-very-dark-blue: hsl(235, 21%, 11%);
+  --color-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --color-dark-light-grayish-blue: hsl(234, 39%, 85%);
+  --color-dark-light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --color-dark-dark-grayish-blue: hsl(234, 11%, 52%);
+  --color-dark-very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --color-dark-very-dark-grayish-blue-hover: hsl(237, 14%, 26%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 62.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body,
+input[type="text"],
+button {
+  font-family: "Josefin Sans", sans-serif, "Courier New", Courier, monospace;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+
+.container {
+  max-width: 54rem;
+  margin: 0 auto;
+}
+
+/* Header Component */
+header {
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.8rem;
 }
-
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: none;
+}
+.wrapper.dark .btn {
+  color: var(--color-dark-dark-grayish-blue);
+}
+.wrapper.dark .btn:hover {
+  color: var(--color-dark-very-dark-grayish-blue-hover);
 }
